@@ -16,18 +16,26 @@ from datetime import datetime
 # from utilsforecast.evaluation import evaluate
 # from utilsforecast.plotting import plot_series
 from utilsforecast.preprocessing import fill_gaps
-from statsforecast import StatsForecast
+
+try:
+    from statsforecast import StatsForecast
+    STATSFORECAST_AVAILABLE = True
+except ImportError:
+    StatsForecast = None
+    STATSFORECAST_AVAILABLE = False
+    
+# from statsforecast import StatsForecast
 # from statsforecast.models import MSTL
-from statsforecast import StatsForecast
+
 # from statsforecast.models import CrostonClassic
-from statsforecast.models import AutoARIMA
+# from statsforecast.models import AutoARIMA
 
 # import copy
 # from hierarchicalforecast.core import HierarchicalReconciliation
 # from hierarchicalforecast.methods import MiddleOut, BottomUp 
 # from hierarchicalforecast.utils import aggregate
-from statsforecast import StatsForecast
-from statsforecast.models import AutoARIMA, Naive
+# from statsforecast import StatsForecast
+# from statsforecast.models import AutoARIMA, Naive
 # from itertools import product
 import warnings
 warnings.filterwarnings("ignore")
