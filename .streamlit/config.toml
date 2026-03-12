@@ -1,0 +1,17 @@
+[theme]
+primaryColor = "#1e3a8a"
+font = "sans serif"
+
+[global]
+showWarningOnDirectExecution = false
+
+[server]
+enableStaticServing = true
+runOnSave = true
+maxUploadSize = 100
+disconnectedSessionTTL = 3600
+maxMessageSize = 500
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = "full"
